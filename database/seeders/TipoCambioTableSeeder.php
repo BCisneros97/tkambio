@@ -14,21 +14,6 @@ class TipoCambioTableSeeder extends Seeder
      */
     public function run()
     {
-        TipoCambio::create([
-            'tc_venta' => 3.711,
-            'tc_compra' => 3.723
-        ]);
-        TipoCambio::create([
-            'tc_venta' => 3.721,
-            'tc_compra' => 3.733
-        ]);
-        TipoCambio::create([
-            'tc_venta' => 3.611,
-            'tc_compra' => 3.623
-        ]);
-        TipoCambio::create([
-            'tc_venta' => 3.811,
-            'tc_compra' => 3.823
-        ]);
+        TipoCambio::factory()->count(20)->create();
     }
 }

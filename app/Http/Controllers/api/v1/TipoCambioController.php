@@ -8,6 +8,11 @@ use App\Models\TipoCambio;
 
 class TipoCambioController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('admin')->except(['index', 'getTcActual']);
+    }
+
     public function index()
     {
         $listadoTC = TipoCambio::latest()->get();
